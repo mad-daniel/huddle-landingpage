@@ -1,0 +1,112 @@
+.header {
+    background: $clr-pale-cyan url(./../images/bg-hero-desktop.svg) no-repeat;
+    padding: 4.7rem 8rem;
+    height: 72rem;
+    &__top {
+        @include flex-row(space-between,center);
+        margin-bottom: 6.5rem;
+        .title-img {
+            height: 3.1rem;
+            width: 20rem;
+            margin-top: 0.2rem;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    &__bottom {
+        @include flex-row(normal,center);
+        &__text {
+            width: 45.6%;
+            padding-right: 7rem;
+            padding-top: 1.6rem;
+            animation: from-right 1.5s ease-in-out;
+            .p {
+                margin-block: 3rem;
+            }
+        }
+        &__img {
+            @include flex-row(center,normal);
+            width: 54.4%;
+            padding-right: 0.5rem;
+            animation: from-left 1.5s ease-in-out;
+            img {
+                width: 100%;
+                max-height: 50rem;
+                max-width: 90rem;
+            }
+        }
+    }
+}
+@media (max-width:$bp-lg) {
+    .header {
+        background: $clr-pale-cyan url(./../images/bg-hero-mobile.svg) no-repeat;
+        background-size: contain;
+        padding: 4.7rem 3rem;
+        height: 122rem;
+        &__top {
+            margin-bottom: 14rem;
+        }
+        &__bottom {
+            @include flex-col(normal,center);
+            &__text {
+                max-width: 60rem;
+                margin-inline: auto;
+                text-align: center;
+                width: 75%;
+                padding-right: 0;
+                .p {
+                    margin-block: 4rem 6rem;
+                }
+                .btn {
+                    margin: 3rem auto 3rem;
+                }
+            }
+            &__img {
+                width: 75%;
+                padding: 5rem 3rem 0;
+            }
+        }
+    }
+}
+@media (max-width:$bp-md) {
+    .header {
+        height: 140rem;
+        &__bottom {
+            &__text {
+                width: 90%;
+            }
+            &__img {
+                width: 100%;
+            }
+        }
+    }
+}
+@media (max-width:$bp-sm) {
+    .header {
+        padding: 3rem 3rem;
+        height: 96rem;
+        &__top {
+            margin-bottom: 10rem;
+            .title-img {
+                height: 2.25rem;
+                width: 13rem;
+            }
+        }
+        &__bottom {
+            &__text {
+                width: 100%;
+            }
+            &__img {
+                padding: 2rem 0 0;
+            }
+        }
+    }
+}
+@media (min-width:$bp-xl) {
+    .header__bottom {
+        max-width: 140rem;
+        margin-inline: auto;
+    }
+}

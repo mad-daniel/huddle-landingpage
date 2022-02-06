@@ -1,0 +1,57 @@
+.btn {
+    &:link,
+    &:visited {
+        @include flex-row(center,center);
+        text-decoration: none;
+        text-align: center;
+        border-radius: 10rem;
+        padding-inline: 6.47rem;
+        transition: all 0.25s ease-out;
+    }
+    &:hover {
+        opacity: 0.7;
+        transform: scaleX(0.9);
+    }
+    &--white {
+        background-color: $clr-white;
+        height: 4.8rem;
+        max-width: 20rem;
+        box-shadow: 0 3px 10px -1px rgba($clr-black, 0.1);
+        padding-bottom: 1px;
+    }
+    &--pink {
+        background-color: $clr-pink;
+        height: 5.6rem;
+        max-width: 28rem;
+        box-shadow: 0 3px 10px -1px rgba($clr-pink, 0.5);
+        padding-bottom: 2px;
+    }
+}
+@media (max-width:$bp-md) {
+    .btn {
+        &:link,
+        &:visited {
+            padding-inline: 5rem;
+        }
+        &--pink {
+            height: 8rem;
+            max-width: 50rem;
+        }
+    }
+}
+@media (max-width:$bp-sm) {
+    .btn {
+        &:link,
+        &:visited {
+            padding-inline: 2rem;
+        }
+        &--white {
+            height: 3rem;
+            max-width: 12rem;
+        }
+        &--pink {
+            height: 5rem;
+            max-width: 30rem;
+        }
+    }
+}

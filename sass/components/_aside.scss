@@ -1,0 +1,35 @@
+.aside {
+    @include flex-col(center,center);
+    z-index: 10;
+    position: relative;
+    background-color: $clr-white;
+    max-width: 80rem;
+    min-height: 28rem;
+    margin: 16rem auto 0;
+    gap: 3rem;
+    box-shadow: 2px 2px 10px 5px rgba($clr-gray, 0.09);
+    border-radius: 1.5rem;
+    & .heading {
+        padding-block: 1.25rem 0.5rem;
+        text-align: center;
+    }
+    & .btn {
+        height: 8rem;
+        min-width: 40rem;
+        box-shadow: 0 7px 12px -1px rgba($clr-gray, 0.4);
+        padding-bottom: 2px;
+    }
+}
+@media (max-width:$bp-lg) {
+    .aside {
+        max-width: 65rem;
+    }
+}
+@media (max-width:$bp-sm) {
+    .aside {
+        .btn {
+            min-width: 22rem;
+            height: 5rem;
+        }
+    }
+}

@@ -1,0 +1,94 @@
+.block {
+    @include flex-row(space-between,normal);
+    min-height: 44rem;
+    border-radius: 1.5rem;
+    padding-inline: 12rem 3.25rem;
+    box-shadow: 2px 2px 10px 5px rgba($clr-gray, 0.09);
+    &__text {
+        @include flex-col(center,normal);
+        flex-basis: 101%;
+        .heading {
+            padding-block: 0.5rem 1.3rem;
+        }
+        .p {
+            max-width: 49rem;
+        }
+    }
+    &__img {
+        @include flex-row(flex-end,center);
+        flex-basis: 99%;
+        & img {
+            width: 76%;
+        }
+    }
+    &:nth-of-type(2) {
+        margin-block: 4rem;
+        padding-right: 2.5rem;
+        & .block__img {
+            order: -1;
+            justify-content: flex-start;
+            margin-right: 9rem;
+            & img {
+                width: 85%;
+            }
+        }
+        .p {
+            max-width: 50rem;
+        }
+    }
+    &:last-of-type {
+        padding-right: 2.5rem;
+        img {
+            width: 78%;
+        }
+    }
+}
+@media (max-width:$bp-lg) {
+    .block {
+        @include flex-col(space-between,center);
+        flex-direction: column-reverse;
+        padding: 10rem 5rem;
+        text-align: center;
+        &__text {
+            .heading {
+                padding-block: 10rem 1.3rem;
+            }
+            .p {
+                max-width: none;
+            }
+        }
+        &__img {
+            & img {
+                margin-inline: auto;
+            }
+        }
+        &:nth-of-type(2) {
+            margin-block: 8rem;
+            padding-inline: 5rem;
+            & .block__img {
+                order: 0;
+                margin-right: 0;
+            }
+            .p {
+                max-width: none;
+            }
+        }
+        &:last-of-type {
+            padding-inline: 5rem;
+        }
+    }
+}
+@media (max-width:$bp-sm) {
+    .block {
+        padding: 8rem 5rem 5rem;
+    }
+}
+@media (min-width:$bp-xl) {
+    .block {
+        max-width: 130rem;
+        margin-inline: auto;
+        img {
+            max-width: 41.8rem;
+        }
+    }
+}

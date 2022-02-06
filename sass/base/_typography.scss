@@ -1,0 +1,178 @@
+body {
+    font-size: $fs-normal;
+}
+.heading {
+    color: $clr-dark-cyan;
+    font-family: $ff-heading;
+    &--main {
+        font-size: 4rem;
+        letter-spacing: -0.25px;
+    }
+    &--secondary {
+        font-size: 2.75rem;
+        letter-spacing: 0.25px;
+    }
+    &--aside {
+        font-size: 3.25rem;
+        letter-spacing: -0.45px;
+    }
+}
+.p {
+    line-height: 1.5;
+    font-size: 1.8rem;
+    font-family: $ff-body;
+    &--header {
+        color: $clr-dark-cyan;
+    }
+    &--block {
+        color: $clr-gray;
+    }
+}
+.btn {
+    font-size: 1.425rem;
+    font-family: $ff-body;
+    font-weight: $fw-body-bold;
+    letter-spacing: -0.15px;
+    &--white {
+        color: $clr-dark-cyan;
+    }
+    &--pink {
+        color: $clr-white;
+    }
+}
+.aside {
+    .btn {
+        font-size: 2rem;
+    }
+}
+.info {
+    font-size: 1.25rem;
+    letter-spacing: -0.05px;
+}
+.footer {
+    color: $clr-white;
+    font-family: $ff-body;
+    &__row {
+        &__contact {
+            font-size: 1.6rem;
+        }
+        &__social__list {
+            li {
+                i {
+                    font-size: 1.5rem;
+                }
+                &:nth-of-type(2) {
+                    i {
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width:$bp-md) {
+    .heading {
+        &--main {
+            font-size: 5rem;
+            letter-spacing: -1px;
+        }
+        &--secondary {
+            font-size: 4rem;
+        }
+    }
+    .p {
+        font-size: 3.25rem;
+        &--block {
+            font-size: 2.75rem;
+        }
+    }
+    .btn {
+        font-size: 2rem;
+        &--pink {
+            font-size: 2.5rem;
+        }
+    }
+    .info {
+        font-size: 2rem;
+    }
+    .footer {
+        &__row {
+            &__contact {
+                font-size: 3rem;
+            }
+            &__list {
+                font-size: 3.5rem;
+            }
+            &__social__list {
+                li {
+                    i {
+                        font-size: 3rem;
+                    }
+                    &:nth-of-type(2) {
+                        i {
+                            font-size: 2.25rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width:$bp-sm) {
+    .heading {
+        &--main {
+            font-size: 3rem;
+        }
+        &--secondary {
+            font-size: 2.5rem;
+        }
+        &--aside {
+            font-size: 2.5rem;
+            letter-spacing: -0.45px;
+        }
+    }
+    .p {
+        font-size: 2rem;
+        &--block {
+            font-size: 1.8rem;
+        }
+    }
+    .btn {
+        &--white {
+            font-size: 1.5rem;
+        }
+        &--pink {
+            font-size: 1.5rem;
+        }
+    }
+    .aside {
+        .btn {
+            font-size: 1.5rem;
+        }
+    }
+    .footer {
+        &__row {
+            &__contact {
+                font-size: 1.8rem;
+            }
+            &__list {
+                font-size: 2rem;
+            }
+            &__social__list {
+                li {
+                    i {
+                        font-size: 2rem;
+                    }
+                    &:nth-of-type(2) {
+                        i {
+                            font-size: 1.75rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .info {
+        font-size: 1rem;
+    }
+}
